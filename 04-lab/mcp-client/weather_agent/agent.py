@@ -32,10 +32,12 @@ try:
     )
     logger.info("✅ MCP toolset created successfully")
     
+    MODEL_NAME = os.getenv("MODEL", "gemini-3.1-flash-lite")
+
     # Create the agent with remote MCP tools
     root_agent = Agent(
         name="weather_agent",
-        model="gemini-2.5-flash",
+        model=MODEL_NAME,
         tools=[weather_tools],
     )
     logger.info("✅ Weather agent initialized with remote MCP tools:")
@@ -54,6 +56,6 @@ except Exception as e:
     logger.warning("⚠️  Creating fallback agent without MCP tools")
     root_agent = Agent(
         name="weather_agent",
-        model="gemini-2.5-flash",
+        model=os.getenv("MODEL", "gemini-3.1-flash-lite"),
     )
 

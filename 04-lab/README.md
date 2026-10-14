@@ -88,3 +88,7 @@ Open http://localhost:8000 in your browser, select `weather_agent`, and ask abou
 | `GOOGLE_API_KEY` | mcp-client/.env | Gemini API key |
 | `PORT` | mcp-server (env) | Override server port (default: 8085) |
 | `MCP_SERVER_URL` | mcp-client/.env | MCP endpoint the agent connects to (default: `http://localhost:8085/mcp`; set to your Cloud Run URL + `/mcp` when deployed) |
+
+## Verification & Demo Result
+
+![ADK Web Chat Demo](adk_web_chat_demo.png)
